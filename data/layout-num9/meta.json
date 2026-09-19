@@ -1,0 +1,14 @@
+{
+  "id": "layout-num9",
+  "title": "数字",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "数字",
+  "tags": ["竖屏"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "布局 JSON", "url": "num9.json" }
+  ],
+  "note": "竖屏数字键盘，运算符号与常用符号同屏。"
+}

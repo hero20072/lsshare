@@ -1,0 +1,298 @@
+{
+  "type": "layout",
+  "id": "traditional_pinyin9",
+  "name": "传统9键",
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 4.0
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "",
+          "action": {
+            "type": "INPUT",
+            "value": ""
+          },
+          "weight": 0.7,
+          "id": "t9_pinyin_bar",
+          "cornerRadii": {
+            "topLeft": 16.0
+          },
+          "isSpacer": true
+        },
+        {
+          "label": "分词",
+          "action": {
+            "type": "INPUT",
+            "value": "'"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "1"
+          },
+          "swipeUpLabel": "1"
+        },
+        {
+          "label": "ABC",
+          "action": {
+            "type": "INPUT",
+            "value": "2"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "2"
+          },
+          "swipeUpLabel": "2"
+        },
+        {
+          "label": "DEF",
+          "action": {
+            "type": "INPUT",
+            "value": "3"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "3"
+          },
+          "swipeUpLabel": "3"
+        },
+        {
+          "label": "删除",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "swipeUpLabel": "",
+          "swipeDownLabel": "",
+          "weight": 0.7,
+          "isRepeatable": true,
+          "cornerRadii": {
+            "topRight": 16.0
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "",
+          "action": {
+            "type": "INPUT",
+            "value": ""
+          },
+          "weight": 0.7,
+          "id": "t9_pinyin_bar_row2",
+          "isSpacer": true
+        },
+        {
+          "label": "GHI",
+          "action": {
+            "type": "INPUT",
+            "value": "4"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "4"
+          },
+          "swipeUpLabel": "4"
+        },
+        {
+          "label": "JKL",
+          "action": {
+            "type": "INPUT",
+            "value": "5"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "5"
+          },
+          "swipeUpLabel": "5"
+        },
+        {
+          "label": "MNO",
+          "action": {
+            "type": "INPUT",
+            "value": "6"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "6"
+          },
+          "swipeUpLabel": "6"
+        },
+        {
+          "label": "重输",
+          "action": {
+            "type": "ENGINE_CONTROL",
+            "value": "CLEAR_COMPOSITION",
+            "actionLabel": " "
+          },
+          "weight": 0.7
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "",
+          "action": {
+            "type": "INPUT",
+            "value": ""
+          },
+          "weight": 0.7,
+          "id": "t9_pinyin_bar_row3",
+          "isSpacer": true
+        },
+        {
+          "label": "PQRS",
+          "action": {
+            "type": "INPUT",
+            "value": "7"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "7"
+          },
+          "swipeUpLabel": "7"
+        },
+        {
+          "label": "TUV",
+          "action": {
+            "type": "INPUT",
+            "value": "8"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "8"
+          },
+          "swipeUpLabel": "8"
+        },
+        {
+          "label": "WXYZ",
+          "action": {
+            "type": "INPUT",
+            "value": "9"
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "9"
+          },
+          "swipeUpLabel": "9"
+        },
+        {
+          "label": "回车",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "weight": 0.7,
+          "isFunctionKey": true,
+          "id": "t9big_enter",
+          "cornerRadii": {
+            "bottomRight": 16.0
+          },
+          "rowSpan": 2
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "符",
+          "action": {
+            "type": "PANEL_CONTROL",
+            "value": "symbols",
+            "actionLabel": " "
+          },
+          "weight": 0.7,
+          "cornerRadii": {
+            "bottomLeft": 16.0
+          }
+        },
+        {
+          "label": "123",
+          "action": {
+            "type": "PANEL_CONTROL",
+            "value": "numeric",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "COMMIT_TEXT",
+            "value": "0"
+          },
+          "swipeUpLabel": "0",
+          "weight": 0.75,
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "Space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "weight": 1.5,
+          "useNormalKeyColor": true
+        },
+        {
+          "label": ",",
+          "action": {
+            "type": "ENGINE_CONTROL",
+            "value": "SELECT_CANDIDATE",
+            "args": "2",
+            "boundSymbol": ","
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "."
+          },
+          "weight": 0.75
+        },
+        {
+          "label": "",
+          "action": {
+            "type": "INPUT",
+            "value": ""
+          },
+          "weight": 0.7,
+          "isSpacer": true
+        }
+      ]
+    }
+  ]
+}

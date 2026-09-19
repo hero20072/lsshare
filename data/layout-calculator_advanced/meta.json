@@ -1,0 +1,14 @@
+{
+  "id": "layout-calculator_advanced",
+  "title": "高级计算器",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "计算器",
+  "tags": ["竖屏"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "布局 JSON", "url": "calculator_advanced.json" }
+  ],
+  "note": "40 键函数计算器，含 abs、幂、取模、三角函数等运算。"
+}

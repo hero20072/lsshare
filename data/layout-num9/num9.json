@@ -1,0 +1,249 @@
+{
+  "type": "layout",
+  "id": "num9",
+  "name": "数字",
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 2.0
+  },
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "()",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "()"
+          },
+          "cornerRadii": {
+            "topLeft": 16.0
+          }
+        },
+        {
+          "label": "@",
+          "action": {
+            "type": "INPUT",
+            "value": "@"
+          }
+        },
+        {
+          "label": "1",
+          "action": {
+            "type": "INPUT",
+            "value": "1"
+          }
+        },
+        {
+          "label": "2",
+          "action": {
+            "type": "INPUT",
+            "value": "2"
+          }
+        },
+        {
+          "label": "3",
+          "action": {
+            "type": "INPUT",
+            "value": "3"
+          }
+        },
+        {
+          "label": "⌫",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "swipeUpLabel": "",
+          "swipeDownLabel": "",
+          "isRepeatable": true,
+          "cornerRadii": {
+            "topRight": 16.0
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "+",
+          "action": {
+            "type": "INPUT",
+            "value": "+"
+          }
+        },
+        {
+          "label": "-",
+          "action": {
+            "type": "INPUT",
+            "value": "-"
+          }
+        },
+        {
+          "label": "4",
+          "action": {
+            "type": "INPUT",
+            "value": "4"
+          }
+        },
+        {
+          "label": "5",
+          "action": {
+            "type": "INPUT",
+            "value": "5"
+          }
+        },
+        {
+          "label": "6",
+          "action": {
+            "type": "INPUT",
+            "value": "6"
+          }
+        },
+        {
+          "label": "%",
+          "action": {
+            "type": "INPUT",
+            "value": "%"
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "×",
+          "action": {
+            "type": "INPUT",
+            "value": "×"
+          }
+        },
+        {
+          "label": "÷",
+          "action": {
+            "type": "INPUT",
+            "value": "÷"
+          }
+        },
+        {
+          "label": "7",
+          "action": {
+            "type": "INPUT",
+            "value": "7"
+          }
+        },
+        {
+          "label": "8",
+          "action": {
+            "type": "INPUT",
+            "value": "8"
+          }
+        },
+        {
+          "label": "9",
+          "action": {
+            "type": "INPUT",
+            "value": "9"
+          }
+        },
+        {
+          "label": "/",
+          "action": {
+            "type": "INPUT",
+            "value": "/"
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "计算",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "TOGGLE_CALCULATOR",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true,
+          "cornerRadii": {
+            "bottomLeft": 16.0
+          }
+        },
+        {
+          "label": "大写",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "TOGGLE_NUMBER_CONVERT",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": ".",
+          "action": {
+            "type": "INPUT",
+            "value": "."
+          }
+        },
+        {
+          "label": "0",
+          "action": {
+            "type": "INPUT",
+            "value": "0"
+          }
+        },
+        {
+          "label": "Space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "isRepeatable": true
+        },
+        {
+          "label": "↵",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "cornerRadii": {
+            "bottomRight": 16.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "type": "layout",
+  "id": "editor",
+  "name": "编辑",
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 2.0
+  },
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "全选",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SELECT_ALL",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "↑",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_UP",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "复制",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "COPY",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "删除",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "←",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "选择",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "START_SELECTION",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "→",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "剪贴",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "CUT",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "行首",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_HOME",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "↓",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_DOWN",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "行尾",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_END",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "粘贴",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "PASTE",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "空格",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "weight": 3.0,
+          "useNormalKeyColor": true,
+          "isRepeatable": true
+        },
+        {
+          "label": "Enter",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "useNormalKeyColor": true
+        }
+      ]
+    }
+  ]
+}

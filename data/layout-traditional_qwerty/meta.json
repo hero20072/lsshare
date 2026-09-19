@@ -1,0 +1,14 @@
+{
+  "id": "layout-traditional_qwerty",
+  "title": "传统26键",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "26键",
+  "tags": ["竖屏", "传统"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "布局 JSON", "url": "traditional_qwerty.json" }
+  ],
+  "note": "经典 26 键排列，功能键独立成列，无滑动手势。"
+}

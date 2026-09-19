@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+
+# 本地临时目录：存放待收录的原始素材，不参与部署
+_inbox/

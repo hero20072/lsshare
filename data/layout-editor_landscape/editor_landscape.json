@@ -1,0 +1,233 @@
+{
+  "type": "layout",
+  "id": "editor_landscape",
+  "name": "编辑-横屏",
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 2.0
+  },
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "←",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "选择",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "START_SELECTION",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "→",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "行首",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_HOME",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "行尾",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_END",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "全选",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SELECT_ALL",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "复制",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "COPY",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "剪切",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "CUT",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "粘贴",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "PASTE",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "撤销",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "重做",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "REDO",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "清空",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          }
+        },
+        {
+          "label": "删除",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "swipeUpLabel": "",
+          "swipeDownLabel": "",
+          "weight": 1.5,
+          "isRepeatable": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "()",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "()"
+          }
+        },
+        {
+          "label": "[]",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "[]"
+          }
+        },
+        {
+          "label": "{}",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "{}"
+          }
+        },
+        {
+          "label": "<>",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "<>"
+          }
+        },
+        {
+          "label": "\"\"",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "\"\""
+          }
+        },
+        {
+          "label": "''",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "''"
+          }
+        },
+        {
+          "label": "``",
+          "action": {
+            "type": "SMART_PAIR",
+            "value": "``"
+          }
+        },
+        {
+          "label": "\\",
+          "action": {
+            "type": "INPUT",
+            "value": "\\"
+          }
+        },
+        {
+          "label": "space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "weight": 4.0,
+          "isRepeatable": true
+        },
+        {
+          "label": "Enter",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "weight": 1.5
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,317 @@
+{
+  "generatedAt": "2026-09-19T02:37:23.554Z",
+  "categories": [
+    {
+      "name": "26键",
+      "count": 2
+    },
+    {
+      "name": "9键",
+      "count": 1
+    },
+    {
+      "name": "数字",
+      "count": 2
+    },
+    {
+      "name": "编辑器",
+      "count": 2
+    },
+    {
+      "name": "计算器",
+      "count": 1
+    },
+    {
+      "name": "主题",
+      "count": 3
+    }
+  ],
+  "tags": [
+    "传统",
+    "工具栏",
+    "横屏",
+    "蓝色",
+    "内置",
+    "浅色",
+    "深色",
+    "竖屏",
+    "新拟态",
+    "T9"
+  ],
+  "count": 11,
+  "items": [
+    {
+      "id": "layout-qwerty_wide",
+      "title": "26键-宽屏",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "26键",
+      "tags": [
+        "横屏"
+      ],
+      "cover": "data/layout-qwerty_wide/cover.jpg",
+      "images": [
+        "data/layout-qwerty_wide/cover.jpg"
+      ],
+      "orientation": "wide",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-qwerty_wide/qwerty_wide.json",
+          "size": "11.5 KB",
+          "external": false
+        }
+      ],
+      "note": "横向铺满的 26 键布局，适合平板或横屏使用。"
+    },
+    {
+      "id": "layout-traditional_qwerty",
+      "title": "传统26键",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "26键",
+      "tags": [
+        "竖屏",
+        "传统"
+      ],
+      "cover": "data/layout-traditional_qwerty/cover.jpg",
+      "images": [
+        "data/layout-traditional_qwerty/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-traditional_qwerty/traditional_qwerty.json",
+          "size": "9.4 KB",
+          "external": false
+        }
+      ],
+      "note": "经典 26 键排列，功能键独立成列，无滑动手势。"
+    },
+    {
+      "id": "layout-traditional_pinyin9",
+      "title": "传统9键",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "9键",
+      "tags": [
+        "竖屏",
+        "传统",
+        "T9"
+      ],
+      "cover": "data/layout-traditional_pinyin9/cover.jpg",
+      "images": [
+        "data/layout-traditional_pinyin9/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-traditional_pinyin9/traditional_pinyin9.json",
+          "size": "6.5 KB",
+          "external": false
+        }
+      ],
+      "note": "经典手机 9 键排列，功能键独立，无滑动手势。"
+    },
+    {
+      "id": "layout-num9",
+      "title": "数字",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "数字",
+      "tags": [
+        "竖屏"
+      ],
+      "cover": "data/layout-num9/cover.jpg",
+      "images": [
+        "data/layout-num9/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-num9/num9.json",
+          "size": "5.1 KB",
+          "external": false
+        }
+      ],
+      "note": "竖屏数字键盘，运算符号与常用符号同屏。"
+    },
+    {
+      "id": "layout-numpad_horizontal",
+      "title": "数字-横屏",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "数字",
+      "tags": [
+        "横屏"
+      ],
+      "cover": "data/layout-numpad_horizontal/cover.jpg",
+      "images": [
+        "data/layout-numpad_horizontal/cover.jpg"
+      ],
+      "orientation": "wide",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-numpad_horizontal/numpad_horizontal.json",
+          "size": "6.0 KB",
+          "external": false
+        }
+      ],
+      "note": "横屏数字键盘，键位更高、便于盲打。"
+    },
+    {
+      "id": "layout-editor",
+      "title": "编辑",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "编辑器",
+      "tags": [
+        "竖屏",
+        "工具栏"
+      ],
+      "cover": "data/layout-editor/cover.jpg",
+      "images": [
+        "data/layout-editor/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-editor/editor.json",
+          "size": "4.3 KB",
+          "external": false
+        }
+      ],
+      "note": "14 键文本编辑工具栏，含全选、复制、移动光标、撤销等快捷操作。"
+    },
+    {
+      "id": "layout-editor_landscape",
+      "title": "编辑-横屏",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "编辑器",
+      "tags": [
+        "横屏",
+        "工具栏"
+      ],
+      "cover": "data/layout-editor_landscape/cover.jpg",
+      "images": [
+        "data/layout-editor_landscape/cover.jpg"
+      ],
+      "orientation": "wide",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-editor_landscape/editor_landscape.json",
+          "size": "5.2 KB",
+          "external": false
+        }
+      ],
+      "note": "横屏版编辑工具栏，扩展了更多编辑与剪贴板操作。"
+    },
+    {
+      "id": "layout-calculator_advanced",
+      "title": "高级计算器",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "计算器",
+      "tags": [
+        "竖屏"
+      ],
+      "cover": "data/layout-calculator_advanced/cover.jpg",
+      "images": [
+        "data/layout-calculator_advanced/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "布局 JSON",
+          "url": "data/layout-calculator_advanced/calculator_advanced.json",
+          "size": "8.1 KB",
+          "external": false
+        }
+      ],
+      "note": "40 键函数计算器，含 abs、幂、取模、三角函数等运算。"
+    },
+    {
+      "id": "theme-haiyan",
+      "title": "海盐",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "主题",
+      "tags": [
+        "深色",
+        "蓝色",
+        "新拟态"
+      ],
+      "cover": "data/theme-haiyan/cover.jpg",
+      "images": [
+        "data/theme-haiyan/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "主题 JSON",
+          "url": "data/theme-haiyan/haiyan.json",
+          "size": "10.4 KB",
+          "external": false
+        }
+      ],
+      "note": "海盐配色：深蓝底同色键帽，依靠新拟态双层阴影与 0.5dp 描边勾勒键形。"
+    },
+    {
+      "id": "theme-default_light",
+      "title": "默认浅色",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "主题",
+      "tags": [
+        "浅色",
+        "内置"
+      ],
+      "cover": "data/theme-default_light/cover.jpg",
+      "images": [
+        "data/theme-default_light/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "主题 JSON",
+          "url": "data/theme-default_light/default_light.json",
+          "size": "1.4 KB",
+          "external": false
+        }
+      ],
+      "note": "内置浅色主题：白键浅灰底，按键带轻微投影以区分边界。"
+    },
+    {
+      "id": "theme-default_dark",
+      "title": "默认深色",
+      "author": "老实输入法 内置",
+      "date": "2026-09-19",
+      "category": "主题",
+      "tags": [
+        "深色",
+        "内置"
+      ],
+      "cover": "data/theme-default_dark/cover.jpg",
+      "images": [
+        "data/theme-default_dark/cover.jpg"
+      ],
+      "orientation": "portrait",
+      "files": [
+        {
+          "label": "主题 JSON",
+          "url": "data/theme-default_dark/default_dark.json",
+          "size": "1.4 KB",
+          "external": false
+        }
+      ],
+      "note": "内置深色主题：深灰底 + 绿色按下反馈，对比清晰、功耗友好。"
+    }
+  ]
+}

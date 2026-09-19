@@ -1,0 +1,51 @@
+{
+  "type": "theme",
+  "id": "default_light",
+  "name": "默认浅色",
+  "colors": {
+    "keyboardBackground": "#F7F7F7",
+    "keyBackground": "#FFFFFF",
+    "keyPressedBackground": "#D5F2C8",
+    "functionKeyBackground": "#FFFFFF",
+    "keyText": "#313131",
+    "keySubText": "#888888",
+    "candidateText": "#313131",
+    "candidateBackground": "#FFFFFF",
+    "topbarBackground": "#00000000",
+    "codezoneBackground": "#FFFFFF",
+    "selectedCandidateBackground": "#D5F2C8",
+    "selectedCandidateText": "#329101",
+    "composingTextColor": "#313131",
+    "topbarWidgetBackground": "#FFFFFF",
+    "widgetText": "#313131",
+    "clipboardPreviewBackground": "#F7F7F7",
+    "toolPanelBackground": "#F7F7F7",
+    "popupText": "#313131",
+    "popupBackground": "#FFFFFF"
+  },
+  "backgroundImagePath": null,
+  "backgroundBlurRadius": 0.0,
+  "backgroundOverlayAlpha": 0.0,
+  "backgroundScaleType": "crop",
+  "backgroundAnimationType": "none",
+  "backgroundAnimationPath": null,
+  "backgroundAnimationSettings": {
+    "loopMode": "loop",
+    "volume": 0.0,
+    "playbackSpeed": 1.0,
+    "overlayAlpha": 0.0,
+    "scaleType": "crop"
+  },
+
+  "animationEnabled": false,
+  "spaceKeyLottiePath": null,
+  "enterKeyLottiePath": null,
+  "loadingAnimationPath": null,
+  "loadingAnimationSettings": {
+    "loopMode": "loop",
+    "volume": 0.0,
+    "playbackSpeed": 1.0,
+    "overlayAlpha": 0.0,
+    "scaleType": "crop"
+  }
+}

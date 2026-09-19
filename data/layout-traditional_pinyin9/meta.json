@@ -1,0 +1,14 @@
+{
+  "id": "layout-traditional_pinyin9",
+  "title": "传统9键",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "9键",
+  "tags": ["竖屏", "传统", "T9"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "布局 JSON", "url": "traditional_pinyin9.json" }
+  ],
+  "note": "经典手机 9 键排列，功能键独立，无滑动手势。"
+}

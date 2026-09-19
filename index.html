@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>老实输入法 · 用户分享</title>
+<meta name="description" content="老实输入法用户分享：键盘布局与配色作品陈列。浏览截图预览，一键下载布局 / 主题 JSON。">
+<meta name="theme-color" content="#12161c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f8fa" media="(prefers-color-scheme: light)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#/">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="8" width="28" height="16" rx="4"/>
+        <rect class="dot" x="6"  y="12" width="4" height="4" rx="1.2"/>
+        <rect class="dot" x="12" y="12" width="4" height="4" rx="1.2"/>
+        <rect class="dot" x="18" y="12" width="4" height="4" rx="1.2"/>
+        <rect class="dot" x="24" y="12" width="2" height="4" rx="1"/>
+        <rect class="dot" x="6"  y="18" width="8" height="3" rx="1.2"/>
+        <rect class="dot" x="16" y="18" width="10" height="3" rx="1.2"/>
+      </svg>
+      <span class="brand-text">
+        <strong>老实输入法</strong>
+        <em>用户分享</em>
+      </span>
+    </a>
+  </div>
+</header>
+
+<main id="app" class="wrap"></main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>所有作品均为社区自制，版权归原作者所有。JSON 文件原样分发，仅供导入老实输入法使用。</p>
+  </div>
+</footer>
+
+<div id="lightbox" class="lightbox" hidden>
+  <button class="lb-close" type="button" aria-label="关闭">&times;</button>
+  <button class="lb-prev" type="button" aria-label="上一张" hidden>&#8249;</button>
+  <img class="lb-image" alt="">
+  <button class="lb-next" type="button" aria-label="下一张" hidden>&#8250;</button>
+  <div class="lb-counter"></div>
+</div>
+
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+收录一个新作品
+==============
+
+  npm run add -- --id <id> --title "<标题>" --category <分类> [选项]
+
+必填
+  --id         作品的英文标识，只用字母数字下划线连字符，会成为 data/<id>/ 目录名
+  --title      展示标题
+
+常用选项
+  --category   一级分类：26键 / 17键 / 14键 / 9键 / 数字 / 编辑器 / 计算器 / 主题
+  --author     作者名，默认「匿名」
+  --tags       标签，逗号分隔，例如 --tags 竖屏,灵犀,新拟态
+  --images     截图路径，逗号分隔。第一张自动作为封面，其余作为详情页附图
+  --files      要分发的 JSON 附件路径，逗号分隔，会被原样拷贝进作品目录
+  --fileLabel  附件的显示名，默认用文件名
+  --note       一句话说明
+
+网盘等外部链接
+  --netdisk      外链地址，例如 https://pan.baidu.com/s/xxxx
+  --netdiskLabel 按钮显示名，默认「网盘下载」
+  --code         提取码，会显示在按钮上
+
+示例
+  npm run add -- --id nautilus-60 \
+    --title "深海蓝 26 键" --category 26键 --author 张三 \
+    --tags 竖屏,灵犀 \
+    --images ~/shots/1.png,~/shots/2.png \
+    --files ~/out/qwerty.json \
+    --note "深蓝底 + 浅蓝键帽"
+
+  npm run add -- --id haiyan-rework --title "海盐改" --category 主题 \
+    --files ~/out/haiyan.json \
+    --netdisk https://pan.baidu.com/s/xxxx --code abcd \
+    --netdiskLabel "网盘打包（含背景图）"
+
+说明
+  截图建议宽度 1200~1600px，单张控制在 400 KB 内。
+  安装 sharp 后会自动压缩为 webp：npm i -D sharp

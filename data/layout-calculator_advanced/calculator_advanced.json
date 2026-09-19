@@ -1,0 +1,382 @@
+{
+  "type": "layout",
+  "id": "calculator_advanced",
+  "name": "高级计算器",
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 2.0
+  },
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "abs",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "abs("
+          },
+          "isFunctionKey": true,
+          "cornerRadii": {
+            "topLeft": 16.0
+          }
+        },
+        {
+          "label": "(",
+          "action": {
+            "type": "INPUT",
+            "value": "("
+          }
+        },
+        {
+          "label": ")",
+          "action": {
+            "type": "INPUT",
+            "value": ")"
+          }
+        },
+        {
+          "label": "^",
+          "action": {
+            "type": "INPUT",
+            "value": "^"
+          }
+        },
+        {
+          "label": "%",
+          "action": {
+            "type": "INPUT",
+            "value": "%"
+          }
+        },
+        {
+          "label": "!",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "!"
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "DEG",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "TOGGLE_DEG_RAD",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "⌫",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "swipeUpLabel": "",
+          "swipeDownLabel": "",
+          "isRepeatable": true,
+          "cornerRadii": {
+            "topRight": 16.0
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "sin",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "sin("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "cos",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "cos("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "tan",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "tan("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "√",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "sqrt("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "ln",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "ln("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "log",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "log("
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "π",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "pi"
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "C",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "+",
+          "action": {
+            "type": "INPUT",
+            "value": "+"
+          }
+        },
+        {
+          "label": "-",
+          "action": {
+            "type": "INPUT",
+            "value": "-"
+          }
+        },
+        {
+          "label": "×",
+          "action": {
+            "type": "INPUT",
+            "value": "×"
+          }
+        },
+        {
+          "label": "÷",
+          "action": {
+            "type": "INPUT",
+            "value": "÷"
+          }
+        },
+        {
+          "label": "7",
+          "action": {
+            "type": "INPUT",
+            "value": "7"
+          }
+        },
+        {
+          "label": "8",
+          "action": {
+            "type": "INPUT",
+            "value": "8"
+          }
+        },
+        {
+          "label": "9",
+          "action": {
+            "type": "INPUT",
+            "value": "9"
+          }
+        },
+        {
+          "label": "Space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "isRepeatable": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": ".",
+          "action": {
+            "type": "INPUT",
+            "value": "."
+          }
+        },
+        {
+          "label": "/",
+          "action": {
+            "type": "INPUT",
+            "value": "/"
+          }
+        },
+        {
+          "label": "e",
+          "action": {
+            "type": "COMMIT_TEXT",
+            "value": "e"
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "=",
+          "action": {
+            "type": "INPUT",
+            "value": "="
+          }
+        },
+        {
+          "label": "4",
+          "action": {
+            "type": "INPUT",
+            "value": "4"
+          }
+        },
+        {
+          "label": "5",
+          "action": {
+            "type": "INPUT",
+            "value": "5"
+          }
+        },
+        {
+          "label": "6",
+          "action": {
+            "type": "INPUT",
+            "value": "6"
+          }
+        },
+        {
+          "label": "↵",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          }
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "ABC",
+          "action": {
+            "type": "PANEL_CONTROL",
+            "value": "qwerty",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true,
+          "cornerRadii": {
+            "bottomLeft": 16.0
+          }
+        },
+        {
+          "label": "计",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "TOGGLE_CALCULATOR",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "转",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "TOGGLE_NUMBER_CONVERT",
+            "actionLabel": " "
+          },
+          "isFunctionKey": true
+        },
+        {
+          "label": "0",
+          "action": {
+            "type": "INPUT",
+            "value": "0"
+          }
+        },
+        {
+          "label": "1",
+          "action": {
+            "type": "INPUT",
+            "value": "1"
+          }
+        },
+        {
+          "label": "2",
+          "action": {
+            "type": "INPUT",
+            "value": "2"
+          }
+        },
+        {
+          "label": "3",
+          "action": {
+            "type": "INPUT",
+            "value": "3"
+          }
+        },
+        {
+          "label": "↵",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "cornerRadii": {
+            "bottomRight": 16.0
+          }
+        }
+      ]
+    }
+  ]
+}

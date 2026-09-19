@@ -1,0 +1,14 @@
+{
+  "id": "layout-editor",
+  "title": "编辑",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "编辑器",
+  "tags": ["竖屏", "工具栏"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "布局 JSON", "url": "editor.json" }
+  ],
+  "note": "14 键文本编辑工具栏，含全选、复制、移动光标、撤销等快捷操作。"
+}

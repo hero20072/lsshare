@@ -1,0 +1,21 @@
+{
+    "id":  "layout-qwerty_wide",
+    "title":  "26键-宽屏",
+    "author":  "老实输入法 内置",
+    "date":  "2026-09-19",
+    "category":  "26键",
+    "tags":  [
+                 "横屏"
+             ],
+    "cover":  null,
+    "shots":  [
+
+              ],
+    "files":  [
+                  {
+                      "url":  "qwerty_wide.json",
+                      "label":  "布局 JSON"
+                  }
+              ],
+    "note":  "横向铺满的 26 键布局，适合平板或横屏使用。"
+}

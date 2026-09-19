@@ -1,0 +1,514 @@
+{
+  "type": "layout",
+  "id": "qwerty_wide",
+  "name": "灵犀26键-宽屏",
+  "dimens": {
+    "keyCornerRadius": 8.0,
+    "swipeLabelSpacing": 2.0
+  },
+  "typography": {
+    "normalKey": {
+      "fontSize": 15.0
+    },
+    "normalKeySub": {
+      "fontSize": 7.0
+    },
+    "functionKey": {
+      "fontSize": 14.0
+    }
+  },
+  "rows": [
+    {
+      "keys": [
+        {
+          "label": "Q",
+          "action": {
+            "type": "INPUT",
+            "value": "q"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "1"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "W",
+          "action": {
+            "type": "INPUT",
+            "value": "w"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "2"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "E",
+          "action": {
+            "type": "INPUT",
+            "value": "e"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "3"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "R",
+          "action": {
+            "type": "INPUT",
+            "value": "r"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "4"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "T",
+          "action": {
+            "type": "INPUT",
+            "value": "t"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "5"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "",
+          "isSpacer": true
+        },
+        {
+          "label": "Y",
+          "action": {
+            "type": "INPUT",
+            "value": "y"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "6"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "U",
+          "action": {
+            "type": "INPUT",
+            "value": "u"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "7"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "I",
+          "action": {
+            "type": "INPUT",
+            "value": "i"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "8"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "O",
+          "action": {
+            "type": "INPUT",
+            "value": "o"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "9"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "P",
+          "action": {
+            "type": "INPUT",
+            "value": "p"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "0"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "⌫",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "BACKSPACE",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "CLEAR",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "UNDO",
+            "actionLabel": " "
+          },
+          "longPressLabel": "",
+          "swipeUpLabel": "",
+          "swipeDownLabel": "",
+          "width": 48.0,
+          "isRepeatable": true,
+          "useNormalKeyColor": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "",
+          "width": 24.0,
+          "isSpacer": true
+        },
+        {
+          "label": "A",
+          "action": {
+            "type": "INPUT",
+            "value": "a"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "~"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "S",
+          "action": {
+            "type": "INPUT",
+            "value": "s"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "!"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "D",
+          "action": {
+            "type": "INPUT",
+            "value": "d"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "@"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "F",
+          "action": {
+            "type": "INPUT",
+            "value": "f"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "#"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "G",
+          "action": {
+            "type": "INPUT",
+            "value": "g"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "%"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "",
+          "isSpacer": true
+        },
+        {
+          "label": "H",
+          "action": {
+            "type": "INPUT",
+            "value": "h"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "&"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "J",
+          "action": {
+            "type": "INPUT",
+            "value": "j"
+          },
+          "swipeUpAction": {
+            "type": "SMART_PAIR",
+            "value": "\"\""
+          },
+          "width": 48.0
+        },
+        {
+          "label": "K",
+          "action": {
+            "type": "INPUT",
+            "value": "k"
+          },
+          "swipeUpAction": {
+            "type": "SMART_PAIR",
+            "value": "()"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "L",
+          "action": {
+            "type": "INPUT",
+            "value": "l"
+          },
+          "swipeUpAction": {
+            "type": "SMART_PAIR",
+            "value": "<>"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "/",
+          "action": {
+            "type": "ENGINE_CONTROL",
+            "value": "SELECT_CANDIDATE",
+            "args": "2",
+            "boundSymbol": "/"
+          },
+          "useNormalKeyColor": true,
+          "width": 48.0
+        },
+        {
+          "label": "",
+          "width": 24.0,
+          "isSpacer": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "↑",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SHIFT",
+            "actionLabel": " "
+          },
+          "doubleTapAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "SHIFT_LOCK",
+            "actionLabel": " "
+          },
+          "width": 48.0,
+          "useNormalKeyColor": true
+        },
+        {
+          "label": "Z",
+          "action": {
+            "type": "INPUT",
+            "value": "z"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "`"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "X",
+          "action": {
+            "type": "INPUT",
+            "value": "x"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "\\"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "C",
+          "action": {
+            "type": "INPUT",
+            "value": "c"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "-"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "V",
+          "action": {
+            "type": "INPUT",
+            "value": "v"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "*"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "",
+          "isSpacer": true
+        },
+        {
+          "label": "B",
+          "action": {
+            "type": "INPUT",
+            "value": "b"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": ":"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "N",
+          "action": {
+            "type": "INPUT",
+            "value": "n"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": ";"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "M",
+          "action": {
+            "type": "INPUT",
+            "value": "m"
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "?"
+          },
+          "width": 48.0
+        },
+        {
+          "label": "Enter",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "ENTER",
+            "actionLabel": " "
+          },
+          "width": 96.0,
+          "useNormalKeyColor": true
+        }
+      ]
+    },
+    {
+      "keys": [
+        {
+          "label": "☰",
+          "action": {
+            "type": "SYSTEM_CONTROL",
+            "value": "TOGGLE_RPEL",
+            "actionLabel": " "
+          },
+          "swipeUpAction": {
+            "type": "PANEL_CONTROL",
+            "value": "RPEL_SWIPE_NEXT",
+            "actionLabel": " "
+          },
+          "swipeDownAction": {
+            "type": "PANEL_CONTROL",
+            "value": "RPEL_SWIPE_PREV",
+            "actionLabel": " "
+          },
+          "width": 96.0,
+          "isFunctionKey": true,
+          "useNormalKeyColor": true,
+          "cornerRadii": {
+            "topRight": 8.0,
+            "bottomRight": 8.0
+          }
+        },
+        {
+          "label": "Space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "width": 144.0,
+          "isRepeatable": true
+        },
+        {
+          "label": "",
+          "isSpacer": true
+        },
+        {
+          "label": "Space",
+          "action": {
+            "type": "EDITOR_CONTROL",
+            "value": "SPACE",
+            "actionLabel": " "
+          },
+          "swipeLeftAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_LEFT",
+            "actionLabel": " "
+          },
+          "swipeRightAction": {
+            "type": "EDITOR_CONTROL",
+            "value": "MOVE_CURSOR_RIGHT",
+            "actionLabel": " "
+          },
+          "width": 144.0,
+          "isRepeatable": true
+        },
+        {
+          "label": ",",
+          "action": {
+            "type": "INPUT",
+            "value": ","
+          },
+          "swipeUpAction": {
+            "type": "INPUT",
+            "value": "."
+          },
+          "swipeUpLabel": ".",
+          "width": 96.0
+        }
+      ]
+    }
+  ]
+}

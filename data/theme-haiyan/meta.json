@@ -1,0 +1,14 @@
+{
+  "id": "theme-haiyan",
+  "title": "海盐",
+  "author": "老实输入法 内置",
+  "date": "2026-09-19",
+  "category": "主题",
+  "tags": ["深色", "蓝色", "新拟态"],
+  "cover": null,
+  "shots": [],
+  "files": [
+    { "label": "主题 JSON", "url": "haiyan.json" }
+  ],
+  "note": "海盐配色：深蓝底同色键帽，依靠新拟态双层阴影与 0.5dp 描边勾勒键形。"
+}

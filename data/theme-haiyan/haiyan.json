@@ -1,0 +1,342 @@
+{
+    "type": "theme",
+    "id": "haiyan",
+    "name": "海盐",
+    "colors": {
+        "keyboardBackground": "#FF215B70",
+        "keyBackground": "#FF215B70",
+        "keyPressedBackground": "#FFAFD9F4",
+        "functionKeyBackground": "#FF215B70",
+        "keyText": "#FF5892B7",
+        "keySubText": "#FF5892B7",
+        "candidateText": "#FF5892B7",
+        "candidateBackground": "#FF215B70",
+        "topbarBackground": "#00000000",
+        "codezoneBackground": "#FF215B70",
+        "selectedCandidateBackground": "#FFAFD9F4",
+        "selectedCandidateText": "#FF5892B7",
+        "composingTextColor": "#FF5892B7",
+        "topbarWidgetBackground": "#FF215B70",
+        "widgetText": "#FF5892B7",
+        "clipboardPreviewBackground": "#FF215B70",
+        "toolPanelBackground": "#FF215B70",
+        "popupText": "#FF5892B7",
+        "popupBackground": "#FF215B70",
+        "rpelBackground": "#FF215B70",
+        "rpelText": "#FF5892B7",
+        "rpelCandidateText": null
+    },
+    "backgroundImagePath": null,
+    "backgroundBlurRadius": 0.0,
+    "backgroundOverlayAlpha": 0.0,
+    "backgroundScaleType": "crop",
+    "backgroundAnimationType": "none",
+    "backgroundAnimationPath": null,
+    "backgroundAnimationSettings": {
+        "loopMode": "loop",
+        "volume": 0.0,
+        "playbackSpeed": 1.0,
+        "overlayAlpha": 0.0,
+        "scaleType": "crop"
+    },
+    "effectSettings": {
+        "activeEffectId": "nebula_stain",
+        "clipToKey": true,
+        "blobRipple": {
+            "colorMode": "random",
+            "paletteColorsArgb": [
+                4294706795,
+                4294956390,
+                4289204064
+            ],
+            "maxRadiusRatio": 0.2,
+            "speed": 0.03125,
+            "saturation": 0.65,
+            "value": 1.0,
+            "alpha": 0.7,
+            "maxRipples": 10
+        },
+        "inkDrop": {
+            "colorMode": "mono",
+            "paletteColorsArgb": [
+                3023254323
+            ],
+            "saturation": 0.65,
+            "value": 1.0,
+            "speed": 0.05556,
+            "radiusMultiplier": 1.0,
+            "alpha": 0.7,
+            "blurRadius": 0.06,
+            "maxRipples": 24
+        },
+        "keyEffects": {
+            "keyShapeEffectId": "none",
+            "keyShiftUpHeightRatio": 0.5,
+            "keyShiftUpScaleX": 1.0,
+            "keyShiftUpScaleY": 1.0,
+            "keyTextShiftUpExtraDp": 16.0,
+            "keyTextScaleOnPress": 1.1,
+            "keyTextSwipeOffsetDp": -1.0,
+            "keyTextSwipeHorizontal": false,
+            "keyShadowNormalDp": 2.0,
+            "keyShadowPressedDp": 1.0,
+            "keyPressScaleEnabled": false,
+            "keyPressScaleRatio": 0.96,
+            "keyPressColorChangeEnabled": true,
+            "keyShadowEnabled": true,
+            "keyShadowMode": "neumorphic",
+            "keyShadowNormalLayers": [
+                {
+                    "enabled": true,
+                    "colorArgb": 1213764279,
+                    "blurRadiusDp": 3.0,
+                    "offsetXDp": -2.0,
+                    "offsetYDp": -2.0,
+                    "alpha": 0.25
+                },
+                {
+                    "enabled": true,
+                    "colorArgb": 3273736534,
+                    "blurRadiusDp": 3.0,
+                    "offsetXDp": 2.0,
+                    "offsetYDp": 2.0,
+                    "alpha": 0.25
+                }
+            ],
+            "keyShadowPressedLayers": []
+        },
+        "keyBorder": {
+            "enabled": true,
+            "thicknessDp": 0.5,
+            "colorMode": "single",
+            "singleColorArgb": 4283994807,
+            "gradientStartColorArgb": 4289500656,
+            "gradientEndColorArgb": 4294706795,
+            "neonEnabled": false,
+            "neonGlowRadiusDp": 4.0
+        },
+        "swarm": {
+            "patternId": "koi",
+            "enableSecondaryTracking": true,
+            "spawnCountMultiplier": 1.0,
+            "speedMultiplier": 1.0,
+            "hoverDurationMs": 1200,
+            "fadeOutDurationMs": 800
+        },
+        "nebulaStain": {
+            "colorMode": "mono",
+            "paletteColorsArgb": [
+                4293260537
+            ],
+            "stainLifetime": 1.53,
+            "maxStains": 10,
+            "stainAlpha": 165.75,
+            "stainRadiusMultiplier": 0.90000004
+        },
+        "nebulaJump": {
+            "colorMode": "random",
+            "shape": "beam",
+            "ballTexture": "basketball",
+            "jumpArc": 0.5,
+            "jumpSpeed": 0.5,
+            "paletteColorsArgb": [],
+            "maxStains": 15,
+            "maxJumps": 10,
+            "stainRadiusMultiplier": 0.8
+        },
+        "nebulaLink": {
+            "colorMode": "random",
+            "paletteColorsArgb": [],
+            "linkLifetimeMs": 3000,
+            "lineWidth": 6.0,
+            "maxStains": 15,
+            "stainRadiusMultiplier": 0.5
+        },
+        "flameRipple": {
+            "numMainCracks": 5,
+            "maxBranchLevel": 4,
+            "branchProbability": 0.3,
+            "animationSpeed": 0.015,
+            "maxRadiusRatio": 0.25,
+            "maxRipples": 10,
+            "coreColorArgb": 4294967278,
+            "midGlowColorArgb": 3439289856,
+            "outerGlowColorArgb": 1442783744
+        },
+        "glowPulse": {
+            "shape": "heart",
+            "colorMode": "random",
+            "paletteColorsArgb": [
+                4294706795,
+                4288256964
+            ],
+            "maxRadiusRatio": 0.18,
+            "pulseCount": 2,
+            "pulseDuration": 0.6,
+            "coreBrightness": 0.9,
+            "glowFalloff": 0.7,
+            "blurIntensity": 0.6,
+            "maxRipples": 5
+        },
+        "paintSplatter": {
+            "colorMode": "random",
+            "paletteColorsArgb": [],
+            "particleCount": 1.0,
+            "spreadAngle": 1.0,
+            "gravityStrength": 1.0,
+            "particleSize": 1.0,
+            "splashTrails": true,
+            "persistentStains": false,
+            "maxStains": 50
+        },
+        "swordReturn": {
+            "colorMode": "random",
+            "paletteColorsArgb": [
+                4289371883,
+                4294956799,
+                4294706845,
+                4288256964,
+                4289226461
+            ],
+            "particleCount": 30,
+            "flySpeed": 1.0,
+            "particleSize": 1.0,
+            "formationIntervalSec": 3.5
+        },
+        "inkInWater": {
+            "colorMode": "mono",
+            "paletteColorsArgb": [
+                4279900718,
+                4279640382,
+                4279186528
+            ],
+            "filamentCount": 6,
+            "branchiness": 1.0,
+            "radiusMultiplier": 1.5,
+            "speed": 0.05,
+            "maxDrops": 16,
+            "maxPointsPerFilament": 120
+        },
+        "soulRequiem": {
+            "colorMode": "random",
+            "soulCount": 12,
+            "maxRadiusRatio": 0.3,
+            "speed": 0.02,
+            "alpha": 0.86,
+            "particleSizeMultiplier": 1.0,
+            "paletteColorsArgb": [
+                4279983648,
+                4281236786,
+                4281896508,
+                4282622023,
+                4283215696,
+                4284922730,
+                4286695300
+            ],
+            "maxRipples": 6
+        },
+        "inkKoi": {
+            "enableSecondaryTracking": true,
+            "spawnCountMultiplier": 1.0,
+            "speedMultiplier": 1.0,
+            "hoverDurationMs": 1200,
+            "fadeOutDurationMs": 800
+        },
+        "inkButterfly": {
+            "enableSecondaryTracking": true,
+            "spawnCountMultiplier": 1.0,
+            "speedMultiplier": 1.0,
+            "hoverDurationMs": 1200,
+            "fadeOutDurationMs": 800
+        },
+        "keyGradient": {
+            "enabled": false,
+            "mode": "linear",
+            "renderMode": "solid",
+            "points": [],
+            "applyToNormalKeys": true,
+            "applyToFunctionKeys": true,
+            "applyToPressedKeys": false,
+            "applyToTopbar": false,
+            "applyToShadow": false
+        },
+        "keyTexture": {
+            "enabled": false,
+            "imagePath": null,
+            "alpha": 1.0
+        },
+        "keyDamage": {
+            "enabled": false,
+            "intensity": 0.5,
+            "roughness": 0.5,
+            "notchDepth": 0.6,
+            "seed": 42
+        },
+        "keyAppearEffect": {
+            "enabled": true,
+            "bgFadeMs": 0,
+            "borderFadeMs": 0,
+            "textFadeMs": 0,
+            "shadowFadeMs": 400
+        },
+        "pinyinBarBackground": {
+            "enabled": false,
+            "animationType": "none",
+            "animationPath": null,
+            "animationSettings": {
+                "loopMode": "loop",
+                "volume": 0.0,
+                "playbackSpeed": 1.0,
+                "overlayAlpha": 0.0,
+                "scaleType": "crop"
+            },
+            "blurRadius": 0.0,
+            "scaleType": "fill"
+        },
+        "gravitySensor": {
+            "enabled": false,
+            "hand": "right",
+            "mode": "squeeze",
+            "sensitivity": 3.0,
+            "maxScale": 1.0,
+            "deadZoneAngle": 0.03,
+            "smoothingFactor": 0.8,
+            "responsiveness": 0.3,
+            "transitionDurationMs": 300
+        },
+        "animationFps": 60
+    },
+    "animationEnabled": false,
+    "spaceKeyLottiePath": null,
+    "enterKeyLottiePath": null,
+    "spaceKeyMedia": {
+        "type": "none",
+        "path": null,
+        "settings": {
+            "loopMode": "loop",
+            "volume": 0.0,
+            "playbackSpeed": 1.0,
+            "overlayAlpha": 0.0,
+            "scaleType": "crop"
+        }
+    },
+    "enterKeyMedia": {
+        "type": "none",
+        "path": null,
+        "settings": {
+            "loopMode": "loop",
+            "volume": 0.0,
+            "playbackSpeed": 1.0,
+            "overlayAlpha": 0.0,
+            "scaleType": "crop"
+        }
+    },
+    "loadingAnimationPath": null,
+    "loadingAnimationSettings": {
+        "loopMode": "loop",
+        "volume": 0.0,
+        "playbackSpeed": 1.0,
+        "overlayAlpha": 0.0,
+        "scaleType": "crop"
+    }
+}

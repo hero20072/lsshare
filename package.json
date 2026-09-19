@@ -1,0 +1,12 @@
+{
+  "name": "laoshi-ime-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "description": "老实输入法用户分享 - 键盘布局与配色陈列页",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "add": "node scripts/add.mjs",
+    "dev": "node scripts/dev.mjs"
+  }
+}
