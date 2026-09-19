@@ -136,11 +136,12 @@ code, .mono {
 }
 .brand-title:hover { color: var(--accent-text); }
 
+/* 描述较长，窄屏允许折行，因此不设 nowrap */
 .brand-sub {
   font-size: 11.5px;
+  line-height: 1.35;
   color: var(--text-dim);
   letter-spacing: .01em;
-  white-space: nowrap;
 }
 
 .brand-sub a {
