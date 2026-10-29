@@ -5,16 +5,17 @@
  * 只做汇总与轻量校验，不解析作品本身的布局 / 主题 JSON —— 那些文件一律
  * 原样存放、原样下载，网页不读取其内容。
  */
-import { readdirSync, readFileSync, writeFileSync, statSync, existsSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, statSync, existsSync, cpSync, rmSync, mkdirSync } from 'node:fs';
 import { join, resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CATEGORY_ORDER } from './categories.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
 const OUT_FILE = join(DATA_DIR, 'index.json');
+const DIST_DIR = join(ROOT, 'dist');
 
-/** 一级分类的展示顺序，未列出的分类会被归到末尾并告警 */
-const CATEGORY_ORDER = ['26键', '17键', '14键', '9键', '数字', '编辑器', '计算器', '主题'];
+const IMAGE_RE = /\.(webp|png|jpe?g|gif|avif)$/i;
 
 const warnings = [];
 /** 还没有任何截图的作品，最后统一提示，避免刷屏 */
@@ -86,7 +87,6 @@ function readMeta(id) {
     warn(`${id} 的分类 "${meta.category}" 不在预设列表中，请在 CATEGORY_ORDER 里补充`);
   }
 
-  const IMAGE_RE = /\.(webp|png|jpe?g|gif|avif)$/i;
   const found = readdirSync(join(DATA_DIR, id)).filter((f) => IMAGE_RE.test(f));
 
   // 自动收录目录里的全部图片：只要把图丢进目录就生效，不存在漏图的可能。
@@ -136,7 +136,6 @@ function readMeta(id) {
     date: meta.date ?? '',
     category: meta.category ?? '未分类',
     tags: meta.tags ?? [],
-    cover: cover ? toUrl(id, cover) : null,
     /** 卡片轮播与弹窗图集共用的顺序，封面在最前 */
     images: images.map((f) => toUrl(id, f)),
     /** 'wide' = 封面是超宽横图，'portrait' = 其余 */
@@ -151,6 +150,20 @@ function toLocalPath(id, url) {
   if (!url || /^https?:\/\//i.test(url) || url.startsWith('//')) return null;
   const abs = join(DATA_DIR, id, url);
   return existsSync(abs) ? abs : null;
+}
+
+/** 发布用的静态产物：Qoder Sites / GitHub Pages 都直接上传 dist/ */
+function buildDist() {
+  rmSync(DIST_DIR, { recursive: true, force: true });
+  mkdirSync(DIST_DIR, { recursive: true });
+  for (const name of ['index.html', 'assets', 'data']) {
+    cpSync(join(ROOT, name), join(DIST_DIR, name), { recursive: true });
+  }
+  // meta.json 只是构建输入，站点运行时不需要
+  for (const entry of readdirSync(join(DIST_DIR, 'data'), { withFileTypes: true })) {
+    if (entry.isDirectory()) rmSync(join(DIST_DIR, 'data', entry.name, 'meta.json'), { force: true });
+  }
+  console.log('dist/ 已生成');
 }
 
 function main() {
@@ -168,7 +181,9 @@ function main() {
   };
 
   items.sort((a, b) => {
-    if (rank(a.category) !== rank(b.category)) return rank(a.category) - rank(b.category);
+    const ra = rank(a.category);
+    const rb = rank(b.category);
+    if (ra !== rb) return ra - rb;
     if (a.date !== b.date) return (b.date || '').localeCompare(a.date || '');
     return a.title.localeCompare(b.title, 'zh-Hans-CN');
   });
@@ -186,8 +201,7 @@ function main() {
 
   const index = {
     generatedAt: new Date().toISOString(),
-    categories,
-    tags: [...new Set(items.flatMap((i) => i.tags))].sort((a, b) => a.localeCompare(b, 'zh-Hans-CN')),
+    categories: categories.map((c) => c.name),
     count: items.length,
     items,
   };
@@ -209,12 +223,14 @@ function main() {
     writeFileSync(OUT_FILE, JSON.stringify(index, null, 2) + '\n', 'utf8');
     console.log('data/index.json 已更新');
   }
-  console.log(`  作品 ${index.count} 条，分类 ${categories.length} 个，标签 ${index.tags.length} 个`);
+  console.log(`  作品 ${index.count} 条，分类 ${categories.length} 个，标签 ${new Set(items.flatMap((i) => i.tags)).size} 个`);
   for (const c of categories) console.log(`    · ${c.name} (${c.count})`);
+
+  buildDist();
 
   if (noCover.length) {
     console.log(`\n${noCover.length} 个作品还没有截图，卡片会显示占位块。`);
-    console.log('把图片命名为 cover.webp 放入对应目录即可；放多张会按文件名顺序自动轮播。');
+    console.log('把截图命名为 cover.* 放入对应目录即可；放多张会按文件名顺序自动轮播。');
     console.log(`  ${noCover.join('、')}`);
   }
   if (warnings.length) console.log(`\n共 ${warnings.length} 条提示，建议逐条处理。`);

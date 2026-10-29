@@ -1,42 +1,12 @@
 {
-  "generatedAt": "2026-09-19T02:37:23.554Z",
+  "generatedAt": "2026-10-29T12:17:45.516Z",
   "categories": [
-    {
-      "name": "26键",
-      "count": 2
-    },
-    {
-      "name": "9键",
-      "count": 1
-    },
-    {
-      "name": "数字",
-      "count": 2
-    },
-    {
-      "name": "编辑器",
-      "count": 2
-    },
-    {
-      "name": "计算器",
-      "count": 1
-    },
-    {
-      "name": "主题",
-      "count": 3
-    }
-  ],
-  "tags": [
-    "传统",
-    "工具栏",
-    "横屏",
-    "蓝色",
-    "内置",
-    "浅色",
-    "深色",
-    "竖屏",
-    "新拟态",
-    "T9"
+    "26键",
+    "9键",
+    "数字",
+    "编辑器",
+    "计算器",
+    "主题"
   ],
   "count": 11,
   "items": [
@@ -49,7 +19,6 @@
       "tags": [
         "横屏"
       ],
-      "cover": "data/layout-qwerty_wide/cover.jpg",
       "images": [
         "data/layout-qwerty_wide/cover.jpg"
       ],
@@ -74,7 +43,6 @@
         "竖屏",
         "传统"
       ],
-      "cover": "data/layout-traditional_qwerty/cover.jpg",
       "images": [
         "data/layout-traditional_qwerty/cover.jpg"
       ],
@@ -100,7 +68,6 @@
         "传统",
         "T9"
       ],
-      "cover": "data/layout-traditional_pinyin9/cover.jpg",
       "images": [
         "data/layout-traditional_pinyin9/cover.jpg"
       ],
@@ -109,7 +76,7 @@
         {
           "label": "布局 JSON",
           "url": "data/layout-traditional_pinyin9/traditional_pinyin9.json",
-          "size": "6.5 KB",
+          "size": "6.7 KB",
           "external": false
         }
       ],
@@ -124,7 +91,6 @@
       "tags": [
         "竖屏"
       ],
-      "cover": "data/layout-num9/cover.jpg",
       "images": [
         "data/layout-num9/cover.jpg"
       ],
@@ -148,7 +114,6 @@
       "tags": [
         "横屏"
       ],
-      "cover": "data/layout-numpad_horizontal/cover.jpg",
       "images": [
         "data/layout-numpad_horizontal/cover.jpg"
       ],
@@ -173,7 +138,6 @@
         "竖屏",
         "工具栏"
       ],
-      "cover": "data/layout-editor/cover.jpg",
       "images": [
         "data/layout-editor/cover.jpg"
       ],
@@ -198,7 +162,6 @@
         "横屏",
         "工具栏"
       ],
-      "cover": "data/layout-editor_landscape/cover.jpg",
       "images": [
         "data/layout-editor_landscape/cover.jpg"
       ],
@@ -222,7 +185,6 @@
       "tags": [
         "竖屏"
       ],
-      "cover": "data/layout-calculator_advanced/cover.jpg",
       "images": [
         "data/layout-calculator_advanced/cover.jpg"
       ],
@@ -248,7 +210,6 @@
         "蓝色",
         "新拟态"
       ],
-      "cover": "data/theme-haiyan/cover.jpg",
       "images": [
         "data/theme-haiyan/cover.jpg"
       ],
@@ -273,7 +234,6 @@
         "浅色",
         "内置"
       ],
-      "cover": "data/theme-default_light/cover.jpg",
       "images": [
         "data/theme-default_light/cover.jpg"
       ],
@@ -298,7 +258,6 @@
         "深色",
         "内置"
       ],
-      "cover": "data/theme-default_dark/cover.jpg",
       "images": [
         "data/theme-default_dark/cover.jpg"
       ],

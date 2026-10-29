@@ -12,10 +12,10 @@
 import { existsSync, mkdirSync, copyFileSync, writeFileSync, readFileSync, statSync } from 'node:fs';
 import { join, resolve, dirname, extname, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { CATEGORY_ORDER } from './categories.mjs';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const DATA_DIR = join(ROOT, 'data');
-const CATEGORY_ORDER = ['26键', '17键', '14键', '9键', '数字', '编辑器', '计算器', '主题'];
 
 function parseArgs(argv) {
   const args = {};

@@ -19,10 +19,11 @@
 │  ├─ index.json            构建产物（前端唯一数据源，勿手改）
 │  └─ <id>/                 一个作品一个目录
 │     ├─ meta.json          元信息
-│     ├─ cover.webp         键盘截图（可选，建议提供）
-│     ├─ shot-2.webp        更多截图（可选）
+│     ├─ cover.jpg          键盘截图（可选，建议提供，cover.* 均可）
+│     ├─ shot-2.jpg         更多截图（可选）
 │     └─ *.json             布局 / 主题文件（原样存放，原样下载）
 └─ scripts/
+   ├─ categories.mjs        分类顺序（构建与收录脚本共用）
    ├─ build.mjs             汇总 meta.json → index.json
    ├─ add.mjs               收录新作品
    └─ dev.mjs               本地预览服务器
@@ -143,7 +144,7 @@ npm run add -- --id my-pack --title "整合包" --category 主题 \
 
 只有**收录了作品**的分类才会出现在页面筛选栏中。预设了分类但暂时没有作品时（如当前的 `17键`、`14键`），该分类不会显示，也不会报错。
 
-如果用了 `CATEGORY_ORDER` 之外的分类，**不会报错也不会丢失**：构建时会自动追加到筛选项末尾，保证任何分类都能被筛选出来。若希望它固定排在靠前的位置，在 `scripts/build.mjs` 与 `scripts/add.mjs` 的 `CATEGORY_ORDER` 中补上即可。
+如果用了 `CATEGORY_ORDER` 之外的分类，**不会报错也不会丢失**：构建时会自动追加到筛选项末尾，保证任何分类都能被筛选出来。若希望它固定排在靠前的位置，在 `scripts/categories.mjs` 的 `CATEGORY_ORDER` 中补上即可。
 
 ---
 

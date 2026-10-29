@@ -38,7 +38,7 @@ jobs:
       - name: 打包站点
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: dist
 
   deploy:
     needs: build

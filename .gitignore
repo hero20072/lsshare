@@ -3,5 +3,8 @@ node_modules/
 Thumbs.db
 *.log
 
+# 构建产物
+dist/
+
 # 本地临时目录：存放待收录的原始素材，不参与部署
 _inbox/

@@ -4,22 +4,39 @@
    ============================================================ */
 
 const INDEX_URL = 'data/index.json';
-const IMPORT_PATHS = {
-  layout: 'Android/data/com.vyv.qlinput/files/layouts/',
-  theme: 'Android/data/com.vyv.qlinput/files/themes/',
-};
 
 const ICONS = {
   download: '<svg viewBox="0 0 20 20"><path d="M10 3.5v8.5"/><path d="m6.6 8.6 3.4 3.4 3.4-3.4"/><path d="M4 16h12"/></svg>',
   external: '<svg viewBox="0 0 20 20"><path d="M11 4h5v5"/><path d="M16 4 8.6 11.4"/><path d="M14 12v3.4A1.6 1.6 0 0 1 12.4 17H4.6A1.6 1.6 0 0 1 3 15.4V7.6A1.6 1.6 0 0 1 4.6 6H8"/></svg>',
   keyboard: '<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="13" width="38" height="22" rx="5"/><path d="M12.5 21h3M20 21h3M27.5 21h3M35 21h1.5M12.5 28h13M29.5 28h6"/></svg>',
-  down: '<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 9v8"/><path d="m3.5 5.5 3.5-3 3.5 3"/><path d="M17 11V3"/><path d="m13.5 6.5 3.5 3 3.5-3"/></svg>',
+  cloud: '<svg viewBox="0 0 20 20"><path d="M6 15.5h8a3.5 3.5 0 0 0 .4-6.98 5 5 0 0 0-9.6 1.3A3 3 0 0 0 6 15.5Z"/></svg>',
+  box: '<svg viewBox="0 0 20 20"><path d="M3 7.5 10 3l7 4.5v6L10 18l-7-4.5z"/><path d="M3 7.5 10 12l7-4.5M10 12v6"/></svg>',
+  group: '<svg viewBox="0 0 20 20"><circle cx="7.4" cy="7" r="2.6"/><path d="M2.8 15.6c0-2.5 2.1-4 4.6-4s4.6 1.5 4.6 4"/><path d="M13.1 5.2a2.3 2.3 0 0 1 0 4.4"/><path d="M14.3 11.9c2 .4 3.4 1.7 3.4 3.7"/></svg>',
 };
 
-let INDEX = null;
+/** 首页顶部的大横幅：把下载入口放在最显眼的位置 */
+const MIRRORS = [
+  {
+    label: '夸克网盘',
+    note: '无需提取码',
+    url: 'https://pan.quark.cn/s/55d808434747?pwd=u7Wg#/list/share',
+    icon: 'cloud',
+  },
+  {
+    label: '百度网盘',
+    note: '提取码 5req',
+    url: 'https://pan.baidu.com/s/1QKGCM3039rrnu5iRX12bug?pwd=5req',
+    icon: 'box',
+  },
+  {
+    label: 'Q群文件',
+    note: '进群下载',
+    url: 'https://qm.qq.com/q/rUX4fX2fHq',
+    icon: 'group',
+  },
+];
 
-/** 记住最近一次首页的筛选参数，供详情页「返回列表」还原筛选条件 */
-let lastHomeQuery = '';
+let INDEX = null;
 
 const appEl = document.getElementById('app');
 const lightboxEl = document.getElementById('lightbox');
@@ -36,26 +53,38 @@ function hueOf(str) {
   return h % 360;
 }
 
+/** 页脚：下载入口与回到顶部 */
+function renderFooter() {
+  const nav = document.querySelector('[data-footer-links]');
+  if (!nav) return;
+  nav.innerHTML = MIRRORS.map(
+    (m) => `<a href="${escapeHtml(m.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(m.label)}</a>`
+  ).join('');
+}
+
+document.querySelector('.to-top')?.addEventListener('click', () => {
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+});
+
 /* ---------------- 路由 ---------------- */
 
 function parseHash() {
-  const raw = location.hash.replace(/^#/, '') || '/';
+  const raw = location.hash.replace(/^#/, '');
   const qi = raw.indexOf('?');
-  const path = qi === -1 ? raw : raw.slice(0, qi);
-  return { path: path || '/', params: new URLSearchParams(qi === -1 ? '' : raw.slice(qi + 1)) };
+  return new URLSearchParams(qi === -1 ? '' : raw.slice(qi + 1));
 }
 
-function setParams(patch, { replace = false } = {}) {
-  const { path, params } = parseHash();
+function setParams(patch) {
+  const params = parseHash();
   for (const [k, v] of Object.entries(patch)) {
-    if (v === null || v === '' || v === 'all') params.delete(k);
+    if (v === '' || v === 'all') params.delete(k);
     else params.set(k, v);
   }
   const qs = params.toString();
-  const next = `#${path}${qs ? `?${qs}` : ''}`;
+  const next = `#/${qs ? `?${qs}` : ''}`;
   if (next === location.hash) return;
-  if (replace) location.replace(next);
-  else location.hash = next;
+  location.hash = next;
 }
 
 /* ---------------- 首页 ---------------- */
@@ -116,8 +145,37 @@ function cardHtml(item) {
     </div>`;
 }
 
+/** 首页顶部的大横幅：把网盘合集入口放在最显眼的位置 */
+function mirrorBanner() {
+  return `
+    <section class="mirror-banner" aria-labelledby="mirror-title">
+      <svg class="mirror-deco" viewBox="0 0 240 240" aria-hidden="true" focusable="false">
+        <circle cx="120" cy="120" r="112"/>
+        <circle cx="120" cy="120" r="84"/>
+        <path d="M120 62v78"/>
+        <path d="m86 112 34 34 34-34"/>
+        <path d="M76 182h88"/>
+      </svg>
+
+      <h2 class="mirror-title" id="mirror-title">点击下载 <span class="mirror-hl">老实输入法</span></h2>
+
+      <div class="mirror-actions">
+        ${MIRRORS.map(
+          (m) => `
+          <a class="mirror-btn" href="${escapeHtml(m.url)}" target="_blank" rel="noopener noreferrer" aria-label="下载老实输入法（${escapeHtml(m.label)}）">
+            <span class="mirror-btn-icon">${ICONS[m.icon]}</span>
+            <span class="mirror-btn-text">
+              <strong>${escapeHtml(m.label)}</strong>
+              <small>${escapeHtml(m.note)}</small>
+            </span>
+            <span class="mirror-btn-arrow" aria-hidden="true">${ICONS.download}</span>
+          </a>`
+        ).join('')}
+      </div>
+    </section>`;
+}
+
 function renderHome(params) {
-  lastHomeQuery = params.toString();
   const cat = params.get('cat') ?? 'all';
   const orient = params.get('orient') ?? '';
   const items = filterItems(params);
@@ -131,7 +189,7 @@ function renderHome(params) {
 
   const chips = [
     { name: 'all', label: '全部', count: byOrientation.length },
-    ...INDEX.categories.map((c) => ({ name: c.name, label: c.name, count: catCount(c.name) })),
+    ...INDEX.categories.map((name) => ({ name, label: name, count: catCount(name) })),
   ];
   const orientations = [
     { name: 'portrait', label: '竖屏', count: orientCount('portrait') },
@@ -139,6 +197,8 @@ function renderHome(params) {
   ];
 
   appEl.innerHTML = `
+    ${mirrorBanner()}
+
     <div class="filters" role="group" aria-label="按分类与屏幕方向筛选">
       <div class="seg" role="group" aria-label="按屏幕方向筛选">
         ${orientations.map((o) => `<button class="seg-btn" type="button" data-orient="${o.name}" aria-pressed="${o.name === orient}">
@@ -174,132 +234,6 @@ function renderHome(params) {
       setParams({ orient: o === orient ? '' : o });
     });
   });
-}
-
-/* ---------------- 详情页 ---------------- */
-
-function fileHtml(file, isPrimary) {
-  const kind = isPrimary ? 'primary' : 'normal';
-  const isExternal = file.external;
-  const icon = isExternal ? ICONS.external : ICONS.download;
-  const sub = isExternal ? '外部链接' : file.size ?? '';
-  const attrs = isExternal
-    ? `href="${escapeHtml(file.url)}" target="_blank" rel="noopener noreferrer"`
-    : `href="${escapeHtml(file.url)}" download`;
-
-  return `
-    <a class="dl" data-kind="${kind}" ${attrs}>
-      <span class="dl-icon">${icon}</span>
-      <span class="dl-text">
-        <span class="dl-label">${escapeHtml(file.label)}</span>
-        <span class="dl-sub">${escapeHtml(sub)}</span>
-      </span>
-      ${file.code ? `<span class="dl-code">${escapeHtml(file.code)}</span>` : ''}
-    </a>`;
-}
-
-function renderDetail(id) {
-  // 带着首页的筛选条件返回，避免用户筛完进详情再回来时丢失筛选结果
-  const backHref = lastHomeQuery ? `#/?${lastHomeQuery}` : '#/';
-  const item = INDEX.items.find((i) => i.id === id);
-  if (!item) {
-    appEl.innerHTML = `<div class="detail-head"><a class="back-link" href="${backHref}">返回</a></div>
-      <div class="empty"><strong>找不到该作品</strong><p>它可能已被移除或链接有误。</p></div>`;
-    return;
-  }
-
-  const hue = hueOf(item.id);
-  const images = item.images ?? [];
-  const isTheme = item.category === '主题';
-  const targetPath = isTheme ? IMPORT_PATHS.theme : IMPORT_PATHS.layout;
-
-  const gallery = images.length
-    ? images.map((src, i) => `
-        <div class="shot" data-index="${i}" style="--h:${hue}">
-          <img class="shot-img" src="${escapeHtml(src)}" alt="${escapeHtml(item.title)} 截图 ${i + 1}" ${i > 0 ? 'loading="lazy"' : ''} decoding="async">
-        </div>`).join('')
-    : `<div class="shot"><div class="shot-placeholder" style="--h:${hue}">${ICONS.keyboard}<p>暂无截图</p></div></div>`;
-
-  const related = INDEX.items.filter((i) => i.category === item.category && i.id !== item.id).slice(0, 4);
-
-  appEl.innerHTML = `
-    <div class="detail-head">
-      <a class="back-link" href="${backHref}">
-        <svg viewBox="0 0 20 20"><path d="M12 5 7 10l5 5"/></svg>
-        返回列表
-      </a>
-    </div>
-
-    <div class="detail">
-      <div class="gallery">${gallery}</div>
-
-      <div class="side">
-        <h1>${escapeHtml(item.title)}</h1>
-
-        <div class="side-meta">
-          <span class="pill accent">${escapeHtml(item.category)}</span>
-          <span>${escapeHtml(item.author)}</span>
-          <span>${escapeHtml(item.date)}</span>
-          ${item.tags.map((t) => `<span class="pill">${escapeHtml(t)}</span>`).join('')}
-        </div>
-
-        ${item.note ? `<p class="note">${escapeHtml(item.note)}</p>` : ''}
-
-        <div class="panel">
-          <h2>下载</h2>
-          ${item.files.length
-            ? `<div class="downloads">${item.files.map((f, i) => fileHtml(f, i === 0 && !f.external)).join('')}</div>`
-            : `<p class="no-file">这个作品暂未提供下载文件。</p>`}
-        </div>
-
-        <div class="panel">
-          <h2>安装到输入法</h2>
-          <div class="paths">
-            <div class="path-item">
-              <span class="path-label">${isTheme ? '主题文件放入' : '布局文件放入'}</span>
-              <span class="path-code">${escapeHtml(targetPath)}<button class="copy-btn" type="button" data-copy="${escapeHtml(targetPath)}">复制</button></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    ${related.length ? `
-    <section class="related">
-      <h2>同类作品</h2>
-      <div class="grid">${related.map(cardHtml).join('')}</div>
-    </section>` : ''}
-  `;
-
-  appEl.querySelectorAll('.shot').forEach((el) => {
-    if (!images.length) return;
-    el.addEventListener('click', () => openLightbox(images, Number(el.dataset.index), item.title));
-  });
-
-  appEl.querySelectorAll('.copy-btn').forEach((btn) => {
-    btn.addEventListener('click', async () => {
-      const ok = await copyText(btn.dataset.copy);
-      btn.textContent = ok ? '已复制' : '复制失败';
-      btn.classList.toggle('done', ok);
-      setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('done'); }, 1600);
-    });
-  });
-}
-
-async function copyText(text) {
-  try {
-    await navigator.clipboard.writeText(text);
-    return true;
-  } catch {
-    const ta = document.createElement('textarea');
-    ta.value = text;
-    ta.style.cssText = 'position:fixed;opacity:0';
-    document.body.appendChild(ta);
-    ta.select();
-    const ok = document.execCommand('copy');
-    ta.remove();
-    return ok;
-  }
 }
 
 /* ---------------- 灯箱 ---------------- */
@@ -429,48 +363,20 @@ appEl.addEventListener('load', (evt) => {
 
 /* ---------------- 图片加载失败兜底 ---------------- */
 
-/**
- * error 事件不冒泡，只能在捕获阶段拦截。
- * 卡片图失败 → 隐藏图片，露出底层的占位块；
- * 详情图失败 → 直接替换成占位块。
- */
+/** error 事件不冒泡，只能在捕获阶段拦截；卡片图失败时隐藏图片，露出底层占位块 */
 appEl.addEventListener('error', (evt) => {
   const el = evt.target;
-  if (!(el instanceof HTMLImageElement)) return;
-
-  if (el.classList.contains('thumb-img')) {
-    el.classList.add('is-broken');
-  } else if (el.classList.contains('shot-img')) {
-    const ph = document.createElement('div');
-    ph.className = 'shot-placeholder';
-    ph.innerHTML = `${ICONS.keyboard}<p>截图加载失败</p>`;
-    el.replaceWith(ph);
-  }
+  if (el instanceof HTMLImageElement && el.classList.contains('thumb-img')) el.classList.add('is-broken');
 }, true);
 
 /* ---------------- 启动 ---------------- */
 
-/** 记录当前视图，用于区分"切换页面"与"原地筛选"，只在切换时回到顶部 */
-let lastScrollKey = null;
-
 function render() {
-  const { path, params } = parseHash();
-  const m = path.match(/^\/item\/(.+)$/);
-
-  if (m) {
-    renderDetail(decodeURIComponent(m[1]));
-  } else {
-    renderHome(params);
-  }
-
-  const scrollKey = m ? `item:${decodeURIComponent(m[1])}` : 'home';
-  if (scrollKey !== lastScrollKey) {
-    window.scrollTo(0, 0);
-    lastScrollKey = scrollKey;
-  }
+  renderHome(parseHash());
 }
 
 async function boot() {
+  renderFooter();
   appEl.innerHTML = `<div class="empty">正在加载…</div>`;
   try {
     const res = await fetch(INDEX_URL, { cache: 'no-cache' });
